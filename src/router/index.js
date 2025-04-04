@@ -17,22 +17,24 @@ const router = createRouter({
       component: () => import('../views/loginPage.vue'),
       meta: {
         title: 'login',
+        backButtonExist: true
       },
     },
-    { //from getting token from backend & route.push to home  
-      path: '/login/token:',
-      name: 'login-status',
-      component: () => import('../views/loginStatusPage.vue'),
-      meta: {
-        title: 'login',
-      },
-    },
+    // { //from getting token from backend & route.push to home  
+    //   path: '/login/token:',
+    //   name: 'login-status',
+    //   component: () => import('../views/loginStatusPage.vue'),
+    //   meta: {
+    //     title: 'login',
+    //   },
+    // },
     {
       path: '/register',
       name: 'register',
       component: () => import('../views/registerPage.vue'),
       meta: {
         title: 'register',
+        backButtonExist: true
       },
     },
     {
@@ -41,14 +43,16 @@ const router = createRouter({
       component: () => import('../views/adminLoginPage.vue'),
       meta: {
         title: 'adminLogin',
+        backButtonExist: true
       },
     },
     {//get token from backend & route.push to admin page (not built yet)
-      path: '/adminLogin',
-      name: 'adminLogin',
-      component: () => import('../views/adminLoginPage.vue'),
+      path: '/adminHome',
+      name: 'adminHome',
+      component: () => import('../views/adminHomePage.vue'),
       meta: {
-        title: 'adminLogin',
+        title: 'adminHome',
+        navBarExist: true
       },
     },
     {
@@ -57,7 +61,7 @@ const router = createRouter({
       component: () => import('../views/HomePage.vue'),
       meta: {
         title: 'Home',
-        navBarExist: true     //show navBar
+        navBarExist: true
       },
     },
     {   //don't touch this, it works
@@ -67,7 +71,7 @@ const router = createRouter({
       props: true,
       meta: {
         title: 'School Details',
-        navBarExist: true
+        navBarExist: true,
       },
     },
     {
@@ -76,6 +80,8 @@ const router = createRouter({
       component: () => import('../views/NotFound.vue'),
       meta: {
         title: '404 Not Found',
+        navBarExist: true,
+
       },
     },
     {
@@ -84,7 +90,8 @@ const router = createRouter({
       component: () => import('../views/DashBoard.vue'),
       meta: {
         title: 'DashBoard',
-        navBarExist: true     //show navBar
+        navBarExist: true,
+
       },
     },
     {
@@ -93,7 +100,8 @@ const router = createRouter({
       component: () => import('../views/rankingPage.vue'),
       meta: {
         title: 'ranking',
-        navBarExist: true     //show navBar
+        navBarExist: true,
+
       },
     },
     {
@@ -102,7 +110,18 @@ const router = createRouter({
       component: () => import('../views/schoolCompare.vue'),
       meta: {
         title: 'compare',
-        navBarExist: true
+        navBarExist: true,
+
+      },
+    },
+    {
+      path: '/filter',
+      name: 'filter',
+      component: () => import('../views/schoolFilter.vue'),
+      meta: {
+        title: 'filter',
+        navBarExist: true,
+
       },
     },
   ],

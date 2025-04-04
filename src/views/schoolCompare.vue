@@ -1,3 +1,5 @@
 <template>
-    <h1>School Compare</h1>
+    <div class="schoolCompare">
+        <h1>School Compare</h1>
+    </div>
 </template>

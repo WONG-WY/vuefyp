@@ -9,6 +9,7 @@
         <li><router-link class="link" :to="{ name: 'DashBoard' }">Dashboard</router-link></li>
         <li><router-link class="link" :to="{ name: 'Ranking' }">Ranking</router-link></li>
         <li><router-link class="link" :to="{ name: 'schoolCompare' }">Compare</router-link></li>
+        <li><router-link class="link" :to="{ name: 'filter' }">Filter</router-link></li>
       </ul>
 
       <!--mobile bar icon problem -->
@@ -22,6 +23,7 @@
           <li><router-link class="link" :to="{ name: 'DashBoard' }">Dashboard</router-link></li>
           <li><router-link class="link" :to="{ name: 'Ranking' }">Ranking</router-link></li>
           <li><router-link class="link" :to="{ name: 'schoolCompare' }">Compare</router-link></li>
+          <li><router-link class="link" :to="{ name: 'filter' }">Filter</router-link></li>
         </ul>
       </transition>
     </nav>

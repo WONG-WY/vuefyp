@@ -2,27 +2,24 @@
 import { RouterView } from 'vue-router' //RouterLink
 
 import NavigationBar from './components/navigationBar.vue';
+import backButton from './components/backButton.vue';
 // @ is an alias to /src
 
 //condition for navbar exist
 import { computed } from 'vue';
 import { useRoute } from 'vue-router'; // Import useRoute
 const route = useRoute(); // Get the current route
+
 const hasNavBar = computed(() => route.meta.navBarExist);
-//
+const hasbackButton = computed(() => route.meta.backButtonExist);
 
 </script>
 
 <template>
-  <!-- <NavigationBar /> -->
   <div class="app">
-    <!-- <div class="main"> -->
-    <!-- <RouterView v-slot="{ Component }">
-      <NavigationBar v-if="hasNavBar" />
-      <component :is="Component" />
-    </RouterView> -->
     <NavigationBar v-if="hasNavBar" />
     <div :class="{ 'main-with-navbar': hasNavBar }">
+      <backButton v-if="hasbackButton" />
       <RouterView />
     </div>
     <!-- </div> -->
